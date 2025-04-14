@@ -6,18 +6,17 @@ media:
 content:
   - name: homepage
     label: Homepage
-    type: singleton
-    file: content/homepage.md
+    type: file
+    path: content/homepage
     fields:
       - { name: title, label: Main Heading, type: string, required: true }
       - { name: description, label: Main Description, type: text }
       - name: featureBoxes
         label: Feature Boxes
-        type: array
+        type: object
         fields:
           - { name: title, label: Box Title, type: string }
           - { name: content, label: Box Content, type: text }
-          - { name: backgroundColor, label: Background Color, type: select, options: ["blue-50", "green-50", "yellow-50", "red-50", "purple-50"] }
 
   - name: events
     label: Events
