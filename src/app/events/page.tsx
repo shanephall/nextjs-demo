@@ -4,8 +4,7 @@ import Container from "@/app/_components/container";
 import Calendar from "@/app/_components/calendar";
 
 export default function Events() {
-  const apiKey = process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_API_KEY || '';
-  const calendarId = process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_ID || '';
+  const calendarId = 'c_1e935bdb15cd343bdb2eeae898b6f73b4f0abec8d6c2011831bbcd76cb5988d1@group.calendar.google.com';
 
   return (
     <main>
@@ -16,7 +15,7 @@ export default function Events() {
             Stay up to date with all HCF events and community activities. Click on any event for more details.
           </p>
           <div className="bg-white rounded-lg shadow-lg p-6">
-            <Calendar apiKey={apiKey} calendarId={calendarId} />
+            <Calendar calendarId={calendarId} />
           </div>
         </div>
       </Container>
