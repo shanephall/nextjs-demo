@@ -6,6 +6,9 @@
     "start": "next start"
   },
   "dependencies": {
+    "@fullcalendar/daygrid": "^6.1.17",
+    "@fullcalendar/google-calendar": "^6.1.17",
+    "@fullcalendar/react": "^6.1.17",
     "classnames": "^2.5.1",
     "date-fns": "^3.3.1",
     "gray-matter": "^4.0.3",
