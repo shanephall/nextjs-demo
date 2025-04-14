@@ -1,7 +1,14 @@
+remote:
+  url: https://app.pagescms.org
+  org: shanephall
+  repo: nextjs-demo
+  branch: main
+
 media:
   input: public/assets
   output: /assets
   categories: [ "image" ]
+
 content:
   - name: posts
     label: Posts
