@@ -2,12 +2,18 @@
 
 const nextConfig = {
   output: 'export',
-  basePath: '/nextjs-demo',
   images: {
     unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+    ],
   },
-  trailingSlash: true,
+  basePath: '/nextjs-demo',
   assetPrefix: '/nextjs-demo/',
+  trailingSlash: true,
 }
 
 module.exports = nextConfig

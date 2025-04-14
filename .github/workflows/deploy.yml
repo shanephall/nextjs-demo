@@ -10,6 +10,8 @@ permissions:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    env:
+      NEXT_PUBLIC_BASE_PATH: /nextjs-demo
 
     steps:
       - name: Checkout
@@ -30,7 +32,6 @@ jobs:
       - name: Add .nojekyll file
         run: |
           touch out/.nojekyll
-          echo "shanephall.github.io" > out/CNAME
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
@@ -38,4 +39,3 @@ jobs:
           folder: out
           branch: gh-pages
           clean: true
-          single-commit: true
