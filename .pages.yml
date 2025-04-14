@@ -4,6 +4,32 @@ media:
   categories: [ "image" ]
 
 content:
+  - name: homepage
+    label: Homepage
+    type: singleton
+    file: content/homepage.md
+    fields:
+      - { name: title, label: Main Heading, type: string, required: true }
+      - { name: description, label: Main Description, type: text }
+      - name: featureBoxes
+        label: Feature Boxes
+        type: array
+        fields:
+          - { name: title, label: Box Title, type: string }
+          - { name: content, label: Box Content, type: text }
+          - { name: backgroundColor, label: Background Color, type: select, options: ["blue-50", "green-50", "yellow-50", "red-50", "purple-50"] }
+
+  - name: events
+    label: Events
+    type: collection
+    path: content/events
+    fields:
+      - { name: title, label: Event Title, type: string, required: true }
+      - { name: date, label: Event Date, type: date, required: true }
+      - { name: time, label: Event Time, type: string }
+      - { name: location, label: Location, type: string }
+      - { name: description, label: Description, type: rich-text }
+
   - name: posts
     label: Posts
     type: collection
