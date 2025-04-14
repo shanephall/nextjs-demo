@@ -7,7 +7,7 @@ content:
   - name: homepage
     label: Homepage
     type: file
-    path: content/homepage
+    path: content/homepage.md
     fields:
       - { name: title, label: Main Heading, type: string, required: true }
       - { name: description, label: Main Description, type: text }
