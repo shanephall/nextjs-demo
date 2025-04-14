@@ -27,7 +27,15 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Add .nojekyll file
+        run: |
+          touch out/.nojekyll
+          echo "shanephall.github.io" > out/CNAME
+
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: out
+          branch: gh-pages
+          clean: true
+          single-commit: true
