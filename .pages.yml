@@ -6,8 +6,8 @@ media:
 content:
   - name: homepage
     label: Homepage
-    type: singleton
-    file: content/homepage.md
+    type: file
+    path: content/homepage.md
     fields:
       - { name: title, label: Main Heading, type: string, required: true }
       - { name: description, label: Main Description, type: text }
@@ -17,7 +17,15 @@ content:
         fields:
           - { name: title, label: Box Title, type: string }
           - { name: content, label: Box Content, type: text }
-          - { name: backgroundColor, label: Background Color, type: select, options: ["blue-50", "green-50", "yellow-50", "red-50", "purple-50"] }
+          - name: backgroundColor
+            label: Background Color
+            type: select
+            options:
+              blue-50: Blue
+              green-50: Green
+              yellow-50: Yellow
+              red-50: Red
+              purple-50: Purple
 
   - name: events
     label: Events
