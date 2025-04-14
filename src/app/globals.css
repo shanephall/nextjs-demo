@@ -2,26 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-/* FullCalendar styles */
-@import '@fullcalendar/common/main.css';
-@import '@fullcalendar/daygrid/main.css';
-
-.fc { /* the calendar root */
-  max-width: 100%;
-  margin: 0 auto;
+/* Calendar embed styles */
+.calendar-wrapper {
+  background: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
 }
 
-.fc-event {
-  cursor: pointer;
-  padding: 2px 4px;
-  border-radius: 4px;
-}
-
-.fc-toolbar-title {
-  font-size: 1.2em !important;
-  font-weight: 600;
-}
-
-.fc-button-primary {
-  @apply bg-blue-600 border-blue-600 hover:bg-blue-700 hover:border-blue-700 !important;
+.upcoming-events-wrapper {
+  background: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
 }
